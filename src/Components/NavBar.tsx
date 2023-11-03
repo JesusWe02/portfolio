@@ -1,27 +1,44 @@
+import { useState } from 'react';
 import imgLogo from '../imgs/tsmWhiteLogo.png';
 import './NavBar.css';
 
 export function NavBar() {
+  const [menu, setMenu] = useState(false);
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
   return (
-    <nav>
-      <div className="nav-container">
-        <div className="nav-logo">
-          <a href="#home">
-            <img src={imgLogo} alt="logoTsm" />
-          </a>
-        </div>
-        <ul className="nav-links">
-          <li>
-            <a href="#home">Home</a>
+    <header className="header-container">
+      <a href="#" className="header-a">
+        <img src={imgLogo} alt="imgNav" />
+      </a>
+      <button onClick={toggleMenu} className="header-button">
+        X
+      </button>
+      <nav className={`nav-container ${menu ? 'isActive' : ''}`}>
+        <ul className="nav-ul">
+          <li className="nav-li">
+            <a href="#" className="nav-a">
+              Inicio
+            </a>
           </li>
-          <li>
-            <a href="#about">About</a>
+          <li className="nav-li">
+            <a href="#" className="nav-a">
+              Habilidades
+            </a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
+          <li className="nav-li">
+            <a href="#" className="nav-a">
+              Proyectos
+            </a>
+          </li>
+          <li className="nav-li">
+            <a href="#" className="nav-a">
+              Contactame
+            </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

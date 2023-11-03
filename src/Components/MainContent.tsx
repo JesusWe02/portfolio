@@ -1,5 +1,4 @@
 import './MainContent.css';
-//import imgDS from '../imgs/main.jpeg';
 
 export function MainContent() {
   return (
