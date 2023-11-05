@@ -1,7 +1,8 @@
+import './Skills.css';
 export function Skills() {
   return (
-    <>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima a
+    <div className="asd">
+      ALorem ipsum dolor sit amet, consectetur adipisicing elit. Minima a
       sapiente placeat ducimus repellat veritatis soluta, quis, esse harum
       reiciendis voluptates consequuntur quia saepe voluptate similique vel
       commodi in repellendus. Lorem ipsum dolor sit amet, consectetur
@@ -15,6 +16,6 @@ export function Skills() {
       sapiente placeat ducimus repellat veritatis soluta, quis, esse harum
       reiciendis voluptates consequuntur quia saepe voluptate similique vel
       commodi in repellendus.
-    </>
+    </div>
   );
 }
