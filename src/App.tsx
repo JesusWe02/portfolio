@@ -1,19 +1,14 @@
-import { Contact } from './Components/Contact';
-import { Footer } from './Components/Footer';
-import { MainContent } from './Components/MainContent';
-import { NavBar } from './Components/NavBar';
-import { Projects } from './Components/Projects';
-import { Skills } from './Components/Skills';
+import "./App.css";
+import { AboutMe } from "./Components/AboutMe/AboutMe";
+import { Header } from "./Components/Header/Header";
+import { Skills } from "./Components/Skills/Skills";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <MainContent />
+      <Header />
+      <AboutMe />
       <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
     </>
   );
 }
