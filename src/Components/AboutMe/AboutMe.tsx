@@ -1,11 +1,17 @@
 import "./AboutMe.css";
-import imgProfile from "../../imgs/profile.png";
+import imgProfileSmall from "../../imgs/profile300px.png";
+import imgProfileMedium from "../../imgs/profile400px.png";
+import imgProfileLarge from "../../imgs/profile500px.png";
 
 export function AboutMe() {
   return (
     <main className="main-container">
       <div className="container-img">
-        <img src={imgProfile} alt="profileImg" />
+        <picture>
+          <source media="(min-width: 1400px)" srcSet={imgProfileLarge} />
+          <source media="(min-width: 1025px)" srcSet={imgProfileMedium} />
+          <img src={imgProfileSmall} alt="profileImg" />
+        </picture>
       </div>
       <div className="container-info">
         <div className="about-info">
