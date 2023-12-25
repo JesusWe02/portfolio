@@ -1,14 +1,14 @@
 .main-container {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   overflow: hidden;
   padding-top: 8rem;
   background: linear-gradient(150.13deg, #1f252e 51.04%, #fbfbfb 51.05%);
 }
 
 .container-img {
-  max-width: 400px;
-  max-height: 500px;
+  max-width: 300px;
+  /* max-height: 500px; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
