@@ -8,7 +8,7 @@ export function AboutMe() {
     <main className="main-container">
       <div className="container-img">
         <picture>
-          <source media="(min-width: 1400px)" srcSet={imgProfileLarge} />
+          <source media="(min-width: 1500px)" srcSet={imgProfileLarge} />
           <source media="(min-width: 1025px)" srcSet={imgProfileMedium} />
           <img src={imgProfileSmall} alt="profileImg" />
         </picture>
@@ -19,7 +19,7 @@ export function AboutMe() {
           <h2>Flexibilidad, Comunicación y Compromiso</h2>
           <p className="p-description">
             Sobre mi Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Fuga atque nihil incidunt modi
+            Fuga atque nihil incidunt
           </p>
           <div className="button-info">
             <button>LinkedIn</button>
