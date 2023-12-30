@@ -1,3 +1,218 @@
-.container-skills {
+.main-section {
   background-color: var(--primary-dark);
+  color: aliceblue;
+  text-align: center;
+  min-width: 300px;
+  padding-bottom: 4rem;
+}
+header > h2 {
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+
+.aboutMe-section {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-aboutMe {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.container-aboutMe > div:not(.firts, .second) {
+  display: none;
+}
+.firts {
+  max-width: 500px;
+  min-height: 400px;
+  padding: 1rem;
+  border: 2px solid var(--white);
+  border-radius: 1rem;
+}
+.second {
+  max-width: 500px;
+  max-height: auto;
+  /* border: 2px solid var(--white); */
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.second > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skills-section {
+  width: 90%;
+  margin: 0 auto;
+}
+.skills > div {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.skills > div > img {
+  width: 120px;
+}
+.other-skills > div {
+  margin: 0rem 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.other-skills > div > img {
+  width: 85px;
+}
+.other-skills > h3 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-aboutMe > div:nth-child(3) {
+    display: block;
+  }
+  .container-aboutMe {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px 200px;
+  }
+  .container-aboutMe > div {
+    display: grid;
+    justify-self: center;
+  }
+  .aboutMe-section {
+    width: 90%;
+  }
+  .firts {
+    grid-row: 1/3;
+    min-height: 100%;
+    max-width: 600px;
+  }
+  .second {
+    max-height: 100%;
+    max-width: 300px;
+  }
+  .second > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .third {
+    grid-column: 2;
+    max-height: 100%;
+    max-width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .third > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .container-aboutMe > div:nth-child(n + 4) {
+    display: block;
+  }
+  .aboutMe-section {
+    width: 60%;
+  }
+  .container-aboutMe {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  .firts {
+    min-width: 200px;
+  }
+  .second {
+    grid-column: 2/4;
+    max-width: 600px;
+    max-height: 400px;
+  }
+  .third {
+    align-self: flex-start;
+  }
+  .fourth {
+    width: auto;
+    /* border: 2px solid var(--white); */
+    border-radius: 1rem;
+    grid-column: 4;
+    grid-row: 1;
+    overflow: hidden;
+  }
+  .fourth > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: grid;
+  }
+  .fifth {
+    max-width: 300px;
+    max-height: 200px;
+    /* border: 2px solid var(--white); */
+    border-radius: 1rem;
+    overflow: hidden;
+    align-self: flex-start;
+  }
+  .fifth > img {
+    width: 100%;
+    min-height: auto;
+    display: block;
+  }
+  .six {
+    max-width: 300px;
+    max-height: 200px;
+    /* border: 2px solid var(--white); */
+    border-radius: 1rem;
+    overflow: hidden;
+    align-self: flex-start;
+  }
+  .six > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .skills-section {
+    width: 30%;
+  }
+  .skills > div > img {
+    width: 100px;
+  }
+  .other-skills > div > img {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1600px) {
+  header > h2 {
+    font-size: 5rem;
+  }
+  .container-aboutMe {
+    padding-top: 2rem;
+  }
+  .skills > div > img {
+    width: 30%;
+    max-width: 80%;
+    transition: width 0.5s;
+  }
+  .other-skills > div > img {
+    width: 20%;
+    max-width: 50%;
+    transition: width 0.5s;
+  }
 }

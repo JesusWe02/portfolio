@@ -1,6 +1,7 @@
 .main-container {
   padding-top: 8rem;
   background: linear-gradient(150.13deg, #1f252e 51.04%, #fbfbfb 51.05%);
+  min-width: 300px;
 }
 .container-img {
   display: flex;
