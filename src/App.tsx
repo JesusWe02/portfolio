@@ -1,6 +1,7 @@
 import "./App.css";
 import { AboutMe } from "./Components/AboutMe/AboutMe";
 import { Header } from "./Components/Header/Header";
+import { Projects } from "./Components/Projects/Projects";
 import { Skills } from "./Components/Skills/Skills";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <AboutMe />
       <Skills />
+      <Projects />
     </>
   );
 }

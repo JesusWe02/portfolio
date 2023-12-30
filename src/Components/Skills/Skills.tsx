@@ -18,10 +18,10 @@ import jobs from "../../imgs/JobsCetificado.png";
 
 export function Skills() {
   return (
-    <section className="main-section">
+    <section className="section-skills">
       <article className="aboutMe-section">
         <header>
-          <h2>Sobre mi</h2>
+          <h2>About Me</h2>
         </header>
         <section className="container-aboutMe">
           <div className="firts">
@@ -64,7 +64,7 @@ export function Skills() {
           </div>
         </section>
         <section className="other-skills">
-          <h3>Otros</h3>
+          <h3>Others</h3>
           <div>
             <img src={bootstrapImg} alt="bootstrapIcon" />
             <img src={githublImg} alt="githubIcon" />

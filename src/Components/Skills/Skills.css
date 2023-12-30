@@ -1,4 +1,4 @@
-.main-section {
+.section-skills {
   background-color: var(--primary-dark);
   color: aliceblue;
   text-align: center;
@@ -120,9 +120,14 @@ header > h2 {
     display: block;
   }
 }
+@media (min-width: 1200px) {
+  .section-skills {
+    background-color: brown;
+  }
+}
 
 @media (min-width: 1400px) {
-  .main-section {
+  .section-skills {
     display: flex;
     flex-direction: row-reverse;
   }
