@@ -35,7 +35,6 @@ header > h2 {
 .second {
   max-width: 500px;
   max-height: auto;
-  /* border: 2px solid var(--white); */
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -120,22 +119,13 @@ header > h2 {
     display: block;
   }
 }
-@media (min-width: 1200px) {
-  .section-skills {
-    background-color: brown;
-  }
-}
 
-@media (min-width: 1400px) {
-  .section-skills {
-    display: flex;
-    flex-direction: row-reverse;
-  }
+@media (min-width: 1200px) {
   .container-aboutMe > div:nth-child(n + 4) {
     display: block;
   }
   .aboutMe-section {
-    width: 60%;
+    width: 90%;
   }
   .container-aboutMe {
     display: grid;
@@ -154,7 +144,6 @@ header > h2 {
   }
   .fourth {
     width: auto;
-    /* border: 2px solid var(--white); */
     border-radius: 1rem;
     grid-column: 4;
     grid-row: 1;
@@ -169,7 +158,6 @@ header > h2 {
   .fifth {
     max-width: 300px;
     max-height: 200px;
-    /* border: 2px solid var(--white); */
     border-radius: 1rem;
     overflow: hidden;
     align-self: flex-start;
@@ -182,7 +170,6 @@ header > h2 {
   .six {
     max-width: 300px;
     max-height: 200px;
-    /* border: 2px solid var(--white); */
     border-radius: 1rem;
     overflow: hidden;
     align-self: flex-start;
@@ -192,32 +179,37 @@ header > h2 {
     height: auto;
     display: block;
   }
-  .skills-section {
-    width: 30%;
-  }
-  .skills > div > img {
-    width: 100px;
-  }
-  .other-skills > div > img {
-    width: 60px;
-  }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
   header > h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .container-aboutMe {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  .section-skills {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .aboutMe-section {
+    width: 70%;
+  }
+  .skills-section {
+    width: 20%;
   }
   .skills > div > img {
-    width: 30%;
-    max-width: 80%;
-    transition: width 0.5s;
+    width: 45%;
+  }
+  .other-skills > div {
+    margin: 0rem;
+    padding: 1rem 0rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
   }
   .other-skills > div > img {
     width: 20%;
-    max-width: 50%;
-    transition: width 0.5s;
   }
 }
