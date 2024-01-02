@@ -17,6 +17,13 @@
   border: 1px solid black;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 16%), 0 8px 10px 1px rgb(0 0 0 / 11%),
+    0 3px 14px 2px rgb(0 0 0 / 10%);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.project-container > article:hover {
+  transform: scale(1.05);
 }
 .project-container > article > img {
   width: 100%;
@@ -30,6 +37,9 @@
   }
   .project-container > article {
     flex: 0 0 calc(45%);
+  }
+  .project-container > article:hover {
+    transform: scale(1.03);
   }
 }
 

@@ -34,12 +34,9 @@ export function Contact() {
         <h2>Contact</h2>
       </header>
       <form ref={form} onSubmit={sendEmail} className="form-container">
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
+        <input type="text" name="user_name" placeholder="Name" required />
+        <input type="email" name="user_email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required />
         <input type="submit" value="Send" />
       </form>
     </section>
