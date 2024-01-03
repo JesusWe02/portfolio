@@ -1,6 +1,6 @@
 .section-contact {
   background-color: var(--primary-dark);
-  background-image: url(../../imgs/footerMobile2.png);
+  background-image: url(../../imgs/footerMobile.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,19 +44,27 @@ textarea {
   transform: translateY(-2px);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 550px) {
   .section-contact {
-    background-image: url(../../imgs/footerTablet4.png);
+    background-image: url(../../imgs/footerMobile2.png);
+    height: 900px;
   }
 }
 
 @media (min-width: 800px) {
   .section-contact {
-    background-image: url(../../imgs/footerDesktop.png);
+    background-image: url(../../imgs/footerTablet.png);
   }
 }
 
 @media (min-width: 1200px) {
-  .form-container {
+  .section-contact {
+    background-image: url(../../imgs/footerDesktop.png);
+  }
+}
+
+@media (min-width: 1500px) {
+  .section-contact {
+    background-image: url(../../imgs/footerPc.png);
   }
 }
