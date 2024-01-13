@@ -13,6 +13,8 @@
 }
 .logo-container {
   max-width: 64px;
+  animation: downSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .logo-container img {
   width: 100%;
@@ -27,6 +29,8 @@
   display: inline-block;
   cursor: pointer;
   transition: transform 0.3s;
+  animation: downSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .icon-container:hover {
   transform: scale(1.2);
@@ -75,6 +79,8 @@
 .ul-container > li {
   list-style: none;
   padding: 2rem;
+  animation: downSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .ul-container li > a {
   position: relative;
@@ -82,9 +88,12 @@
   font-size: xx-large;
   color: var(--li);
   overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s;
 }
 .ul-container > li > a::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -99,6 +108,7 @@
 }
 .ul-container > li > a:hover {
   color: var(--white);
+  transform: scale(1.1); /* Agregado: escala al pasar el mouse */
 }
 
 @media (min-width: 768px) {
@@ -134,5 +144,16 @@
 @media (min-width: 1200px) {
   .header-container {
     padding: 1rem 4rem 1rem 4rem;
+  }
+}
+
+@keyframes downSideAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

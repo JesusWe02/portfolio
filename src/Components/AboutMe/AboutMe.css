@@ -6,16 +6,17 @@
 .container-img {
   display: flex;
   justify-content: center;
+  animation: leftSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .about-info {
   text-align: center;
+  animation: rightSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .about-info > h1 {
   font-size: 3.5rem;
   color: var(--surface-primary);
-  opacity: 0;
-  animation: leftSideAnimation 1s ease forwards;
-  animation-delay: 0.1s;
 }
 .about-info > h2 {
   font-size: 1.5rem;
@@ -53,6 +54,8 @@
   .container-img {
     width: 50%;
     display: flex;
+    animation: upSideAnimation 1s ease forwards;
+    animation-delay: 0.1s;
   }
   .container-info {
     width: 50%;
@@ -132,6 +135,28 @@
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightSideAnimation {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upSideAnimation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
