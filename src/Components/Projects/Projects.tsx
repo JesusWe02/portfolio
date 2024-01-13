@@ -46,7 +46,7 @@ const porjectsData = [
 ];
 export function Projects() {
   return (
-    <section className="section-projects">
+    <section className="section-projects" id="projects">
       <header>
         <h2>Projects</h2>
       </header>

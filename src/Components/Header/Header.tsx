@@ -1,4 +1,5 @@
 import "./Header.css";
+import { Link } from "react-scroll";
 import logo from "../../imgs/tsmWhiteLogo.png";
 import { useState } from "react";
 
@@ -7,12 +8,17 @@ export function Header() {
   const toggleMenu = () => {
     setMenu(!menu);
   };
+  const closeMenu = () => {
+    setMenu(false);
+  };
 
   return (
     <header className="header-container">
-      <div className="logo-container">
-        <img src={logo} alt="logoHeader" />
-      </div>
+      <Link to="about" smooth={true} duration={500} onClick={closeMenu}>
+        <div className="logo-container">
+          <img src={logo} alt="logoHeader" />
+        </div>
+      </Link>
       <div
         className={`icon-container ${menu ? "change" : ""}`}
         onClick={toggleMenu}
@@ -24,16 +30,42 @@ export function Header() {
       <nav className={`nav-container ${menu ? "isActive" : ""}`}>
         <ul className="ul-container">
           <li>
-            <a href="#AboutMe">About Me</a>
+            <Link to="about" smooth={true} duration={500} onClick={closeMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#Projects">Projects</a>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              onClick={closeMenu}
+            >
+              About Me
+            </Link>
           </li>
           <li>
-            <a href="#Skills">Skills</a>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              onClick={closeMenu}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#Contact">Contact</a>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-100}
+              onClick={closeMenu}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

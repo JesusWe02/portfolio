@@ -38,7 +38,7 @@ export function Contact() {
   };
 
   return (
-    <section className="section-contact">
+    <section className="section-contact" id="contact">
       <header>
         <h2>Contact</h2>
       </header>

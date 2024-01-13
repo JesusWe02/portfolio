@@ -13,6 +13,9 @@
 .about-info > h1 {
   font-size: 3.5rem;
   color: var(--surface-primary);
+  opacity: 0;
+  animation: leftSideAnimation 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .about-info > h2 {
   font-size: 1.5rem;
@@ -35,7 +38,7 @@
   font-size: 2rem;
 }
 .button-info button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 .button-info button:active {
   transform: translate(2px, 2px);
@@ -65,7 +68,8 @@
   }
   .p-description {
     display: block;
-    font-size: 1rem;
+    font-size: 24px;
+    font-weight: 400;
   }
   .button-info {
     padding-top: 1rem;
@@ -75,6 +79,9 @@
 @media (min-width: 1150px) {
   .container-info {
     padding-bottom: 2rem;
+  }
+  .button-info {
+    padding-top: 1.5rem;
   }
 }
 
@@ -89,8 +96,10 @@
     font-size: 3rem;
   }
   .p-description {
-    display: block;
-    font-size: 1rem;
+    font-size: 28px;
+  }
+  .button-info {
+    padding-top: 2rem;
   }
 }
 
@@ -113,5 +122,16 @@
     padding: 0.8rem 2rem;
     transition: transform 0.3s ease-in-out;
     font-size: 1.8rem;
+  }
+}
+
+@keyframes leftSideAnimation {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -18,18 +18,25 @@ import jobs from "../../imgs/JobsCetificado.png";
 
 export function Skills() {
   return (
-    <section className="section-skills">
+    <section className="section-skills" id="skills">
       <article className="aboutMe-section">
         <header>
           <h2>About Me</h2>
         </header>
         <section className="container-aboutMe">
-          <div className="firts">
+          <div className="first">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              maxime quo inventore aperiam corrupti animi saepe assumenda
-              dolorem veritatis consequatur, corporis ratione nemo, quae impedit
-              magnam quas sit laudantium blanditiis. Lorem ipsum dolor sit amet
+              Hello, I'm Jesus! I'm new to the world of programming and strive
+              to get better every day. Since childhood, I've always been
+              passionate about everything related to technology and computers,
+              leading me to assemble my first computer at a young age. In my
+              free time, I enjoy assembling and maintaining computers, as well
+              as solving issues for my clients.
+            </p>
+            <br />
+            <p>
+              Currently, I am looking to enter this new field of programming to
+              grow professionally and, above all, as an individual.
             </p>
           </div>
           <div className="second">

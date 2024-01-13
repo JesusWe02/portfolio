@@ -161,11 +161,6 @@ textarea {
   .social-icons {
     gap: 3rem;
   }
-  .contact-info > ul {
-    flex-direction: row;
-    gap: 4rem;
-    padding-bottom: 15px;
-  }
 }
 
 @media (min-width: 1500px) {
