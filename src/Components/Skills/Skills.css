@@ -9,7 +9,6 @@ header > h2 {
   padding-top: 2rem;
   font-size: 3rem;
 }
-
 .aboutMe-section {
   width: 80%;
   margin: 0 auto;
@@ -25,25 +24,66 @@ header > h2 {
 .container-aboutMe > div:not(.first, .second) {
   display: none;
 }
-.first {
-  max-width: 500px;
-  min-height: 400px;
-  padding: 1rem;
-  border: 2px solid var(--white);
-  border-radius: 1rem;
+
+.container-aboutMe > div:not(:first-child) {
+  transition: transform 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
-.second {
-  max-width: 500px;
-  max-height: auto;
-  border-radius: 1rem;
-  overflow: hidden;
+.container-aboutMe > div:before,
+.container-aboutMe > div:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #e64d8f,
+    #004080,
+    #006600,
+    #b3b300,
+    #e00d0d,
+    #e64d8f,
+    #004080,
+    #006600,
+    #b3b300,
+    #d80c0c
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 40s linear infinite;
 }
-.second > img {
+.container-aboutMe > div:not(:first-child) > img {
+  padding: 4px;
   width: 100%;
   height: auto;
   display: block;
 }
-
+.container-aboutMe > div:not(:first-child):hover {
+  transform: scale(1.05);
+}
+.first {
+  max-width: 500px;
+  min-height: auto;
+  position: relative;
+  z-index: 1;
+  border: 2px solid var(--primary-dark);
+}
+.first:after {
+  filter: blur(5px);
+}
+.first-content {
+  background-color: var(--primary-dark);
+  padding: 1rem;
+}
+.second {
+  max-width: 500px;
+  max-height: auto;
+  overflow: hidden;
+}
 .skills-section {
   width: 90%;
   margin: 0 auto;
@@ -75,7 +115,11 @@ header > h2 {
 .other-skills > h3 {
   font-size: 2.5rem;
 }
-
+@media (min-width: 500px) {
+  .first-content > p {
+    font-size: 19px;
+  }
+}
 @media (min-width: 768px) {
   .container-aboutMe > div:nth-child(3) {
     display: block;
@@ -97,29 +141,27 @@ header > h2 {
     min-height: 100%;
     max-width: 600px;
   }
-  .first > p {
+  .first-content > p {
     font-size: 18px;
   }
   .second {
-    max-height: 100%;
-    max-width: 300px;
-  }
-  .second > img {
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 280px;
   }
   .third {
     grid-column: 2;
-    max-height: 100%;
-    max-width: 300px;
-    border-radius: 1rem;
+    max-width: 280px;
     overflow: hidden;
   }
-  .third > img {
-    width: 100%;
-    height: auto;
-    display: block;
+}
+
+@media (min-width: 900px) {
+  .first-content > p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .first-content > p {
+    font-size: 21px;
   }
 }
 
@@ -137,6 +179,9 @@ header > h2 {
   .first {
     min-width: 200px;
   }
+  .first-content > p {
+    font-size: 18px;
+  }
   .second {
     grid-column: 2/4;
     max-width: 600px;
@@ -147,46 +192,42 @@ header > h2 {
   }
   .fourth {
     width: auto;
-    border-radius: 1rem;
     grid-column: 4;
     grid-row: 1;
     overflow: hidden;
   }
   .fourth > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: grid;
+    min-height: 308px;
   }
-  .fifth {
-    max-width: 300px;
-    max-height: 200px;
-    border-radius: 1rem;
-    overflow: hidden;
-    align-self: flex-start;
-  }
-  .fifth > img {
-    width: 100%;
-    min-height: auto;
-    display: block;
-  }
+  .fifth,
   .six {
     max-width: 300px;
     max-height: 200px;
-    border-radius: 1rem;
     overflow: hidden;
     align-self: flex-start;
   }
-  .six > img {
-    width: 100%;
-    height: auto;
-    display: block;
+}
+@media (min-width: 1230px) {
+  .first-content > p {
+    font-size: 20px;
   }
 }
-
+@media (min-width: 1300px) {
+  .first-content > p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1400px) {
+  .first-content > p {
+    font-size: 22px;
+  }
+}
 @media (min-width: 1500px) {
   header > h2 {
     font-size: 4.5rem;
+  }
+  .first-content > p {
+    font-size: 18px;
   }
   .container-aboutMe {
     padding-top: 1.5rem;
@@ -214,5 +255,38 @@ header > h2 {
   }
   .other-skills > div > img {
     width: 20%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .first-content > p {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1700px) {
+  .first-content > p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1800px) {
+  .first-content > p {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1900px) {
+  .first-content > p {
+    font-size: 23px;
+  }
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
