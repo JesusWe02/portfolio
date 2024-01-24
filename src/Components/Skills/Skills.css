@@ -93,8 +93,8 @@ header > h2 {
   );
   content: '';
   display: block;
-  height: 100%;
-  left: -75%;
+  height: 120%;
+  left: -95%;
   position: absolute;
   top: 0;
   transform: skewX(-35deg) scaleX(0.2);
