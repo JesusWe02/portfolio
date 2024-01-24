@@ -26,7 +26,7 @@ header > h2 {
 }
 
 .container-aboutMe > div:not(:first-child) {
-  transition: transform 0.3s;
+  transition: filter 0.3s, transform 0.5s;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -71,6 +71,10 @@ header > h2 {
   position: relative;
   z-index: 1;
   border: 2px solid var(--primary-dark);
+  transition: filter 0.3s, transform 0.5s;
+}
+.first:hover {
+  transform: scale(1.03);
 }
 .first:after {
   filter: blur(5px);
@@ -78,6 +82,30 @@ header > h2 {
 .first-content {
   background-color: var(--primary-dark);
   padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.first-content::before {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  content: '';
+  display: block;
+  height: 100%;
+  left: -75%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-35deg) scaleX(0.2);
+  width: 50%;
+  z-index: 2;
+  transition: left 0.5s;
+}
+
+.first-content:hover::before,
+.first-content:focus::before {
+  animation: shine 0.85s forwards;
 }
 .second {
   max-width: 500px;
@@ -99,6 +127,13 @@ header > h2 {
 }
 .skills > div > img {
   width: 120px;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: filter 0.3s, transform 0.5s;
+}
+.skills > div > img:hover {
+  filter: drop-shadow(0 0 5px var(--white));
+  transform: scale(1.1) translateY(-15px);
 }
 .other-skills > div {
   margin: 0rem 1rem;
@@ -109,11 +144,18 @@ header > h2 {
   justify-content: center;
   align-items: center;
 }
-.other-skills > div > img {
-  width: 85px;
-}
 .other-skills > h3 {
   font-size: 2.5rem;
+}
+.other-skills > div > img {
+  width: 85px;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: filter 0.3s, transform 0.5s;
+}
+.other-skills > div > img:hover {
+  filter: drop-shadow(0 0 5px var(--white));
+  transform: scale(1.1) translateY(-15px);
 }
 @media (min-width: 500px) {
   .first-content > p {
@@ -235,6 +277,7 @@ header > h2 {
   .section-skills {
     display: flex;
     flex-direction: row-reverse;
+    padding-bottom: 6rem;
   }
   .aboutMe-section {
     width: 70%;
@@ -243,7 +286,8 @@ header > h2 {
     width: 20%;
   }
   .skills > div > img {
-    width: 45%;
+    width: 40%;
+    padding: 0.5rem;
   }
   .other-skills > div {
     margin: 0rem;
@@ -254,7 +298,7 @@ header > h2 {
     align-items: center;
   }
   .other-skills > div > img {
-    width: 20%;
+    width: 18%;
   }
 }
 
@@ -288,5 +332,11 @@ header > h2 {
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }
