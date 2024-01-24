@@ -84,6 +84,9 @@ header > h2 {
   padding: 1rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .first-content::before {
   background: linear-gradient(
@@ -222,7 +225,7 @@ header > h2 {
     min-width: 200px;
   }
   .first-content > p {
-    font-size: 18px;
+    font-size: 19px;
   }
   .second {
     grid-column: 2/4;
@@ -261,7 +264,7 @@ header > h2 {
 }
 @media (min-width: 1400px) {
   .first-content > p {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 @media (min-width: 1500px) {
@@ -269,7 +272,7 @@ header > h2 {
     font-size: 4.5rem;
   }
   .first-content > p {
-    font-size: 18px;
+    font-size: 19px;
   }
   .container-aboutMe {
     padding-top: 1.5rem;
@@ -304,7 +307,7 @@ header > h2 {
 
 @media (min-width: 1600px) {
   .first-content > p {
-    font-size: 19px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1700px) {
@@ -314,12 +317,12 @@ header > h2 {
 }
 @media (min-width: 1800px) {
   .first-content > p {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 @media (min-width: 1900px) {
   .first-content > p {
-    font-size: 23px;
+    font-size: 24px;
   }
 }
 
