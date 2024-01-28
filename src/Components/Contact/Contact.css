@@ -9,6 +9,7 @@
   text-align: center;
   min-width: 300px;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(220, 220, 220, 0.4);
 }
 .form-container {
   width: 80%;
@@ -29,7 +30,7 @@ textarea {
   min-height: 200px;
   resize: none;
 }
-.form-container input[type="submit"] {
+.form-container input[type='submit'] {
   margin: 0 auto;
   padding: 10px 80px;
   cursor: pointer;
@@ -37,7 +38,7 @@ textarea {
   font-weight: 500;
   transition: transform 200ms;
 }
-.form-container input[type="submit"]:hover {
+.form-container input[type='submit']:hover {
   transform: translateY(-2px);
 }
 .container-footer {

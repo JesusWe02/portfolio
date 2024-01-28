@@ -3,6 +3,7 @@
   text-align: center;
   min-width: 300px;
   padding-bottom: 4rem;
+  text-shadow: 2px 2px 4px rgba(39, 43, 44, 0.4);
 }
 .project-container {
   display: flex;

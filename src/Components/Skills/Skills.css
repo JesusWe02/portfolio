@@ -4,6 +4,7 @@
   text-align: center;
   min-width: 300px;
   padding-bottom: 4rem;
+  text-shadow: 2px 2px 4px rgba(220, 220, 220, 0.4);
 }
 header > h2 {
   padding-top: 2rem;

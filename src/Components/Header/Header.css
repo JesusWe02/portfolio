@@ -13,7 +13,7 @@
 }
 .logo-container {
   max-width: 64px;
-  animation: downSideAnimation 1s ease forwards;
+  animation: rotateAndSlideLogo 2s ease;
   animation-delay: 0.1s;
 }
 .logo-container img {
@@ -111,6 +111,15 @@
   transform: scale(1.1);
 }
 
+.ul-container > li > .active,
+.ul-container > li > a:hover {
+  color: var(--white);
+  transform: scale(1.1);
+  /* &::before {
+    width: 100%;
+  } */
+}
+
 @media (min-width: 768px) {
   .header-container {
     padding: 1rem 3rem 1rem 3rem;
@@ -155,5 +164,20 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes rotateAndSlideLogo {
+  0% {
+    transform: translateX(-250%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0) rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
