@@ -10,6 +10,7 @@
   z-index: 4;
   overflow: visible;
   box-shadow: 0 1px 12px rgba(223, 217, 217, 0.3);
+  min-width: 360px;
 }
 .logo-container {
   max-width: 64px;
@@ -115,9 +116,9 @@
 .ul-container > li > a:hover {
   color: var(--white);
   transform: scale(1.1);
-  /* &::before {
+  &::before {
     width: 100%;
-  } */
+  }
 }
 
 @media (min-width: 768px) {

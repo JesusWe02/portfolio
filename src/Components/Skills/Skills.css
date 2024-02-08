@@ -2,7 +2,7 @@
   background-color: var(--primary-dark);
   color: aliceblue;
   text-align: center;
-  min-width: 300px;
+  min-width: 360px;
   padding-bottom: 4rem;
   text-shadow: 2px 2px 4px rgba(220, 220, 220, 0.4);
 }
@@ -73,6 +73,7 @@ header > h2 {
   z-index: 1;
   border: 2px solid var(--primary-dark);
   transition: filter 0.3s, transform 0.5s;
+  text-wrap: pretty;
 }
 .first:hover {
   transform: scale(1.03);

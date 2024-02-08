@@ -1,7 +1,7 @@
 .main-container {
   padding-top: 8rem;
   background: linear-gradient(150.13deg, #1f252e 51.04%, #fbfbfb 51.05%);
-  min-width: 300px;
+  min-width: 360px;
 }
 .container-img {
   display: flex;
@@ -35,6 +35,7 @@
 .about-info > h2 {
   font-size: 1.5rem;
   color: var(--surface-secondary);
+  text-wrap: balance;
 }
 .p-description {
   display: none;
