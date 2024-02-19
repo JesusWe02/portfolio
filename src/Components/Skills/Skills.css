@@ -22,16 +22,32 @@ header > h2 {
   align-items: center;
   gap: 1rem;
 }
+
+/* .container-aboutMe > div {
+  z-index: 0;
+} */
+
+.container-aboutMe > div > .modal .overlay {
+  /* z-index: 20; */
+}
+
+/* .container-aboutMe {
+  z-index: 1;
+} */
+
 .container-aboutMe > div:not(.first, .second) {
-  display: none;
+  /* display: none; */
 }
 
 .container-aboutMe > div:not(:first-child) {
   transition: filter 0.3s, transform 0.5s;
   cursor: pointer;
   position: relative;
+  /*se agrego esto*/
   z-index: 1;
+  /* z-index: 1; */
 }
+
 .container-aboutMe > div:before,
 .container-aboutMe > div:after {
   content: '';
@@ -64,8 +80,44 @@ header > h2 {
   display: block;
 }
 .container-aboutMe > div:not(:first-child):hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
+
+/* .container-aboutMe > div:before,
+.container-aboutMe > div:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #e64d8f,
+    #004080,
+    #006600,
+    #b3b300,
+    #e00d0d,
+    #e64d8f,
+    #004080,
+    #006600,
+    #b3b300,
+    #d80c0c
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 40s linear infinite;
+}
+.container-aboutMe > div:not(:first-child) > img {
+  padding: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.container-aboutMe > div:not(:first-child):hover {
+  transform: scale(1.05);
+} */
+
 .first {
   max-width: 500px;
   min-height: auto;
@@ -117,6 +169,11 @@ header > h2 {
   max-height: auto;
   overflow: hidden;
 }
+.imgModal {
+  min-width: auto;
+  max-width: 100%;
+  min-height: 100%;
+}
 .skills-section {
   width: 90%;
   margin: 0 auto;
@@ -162,6 +219,7 @@ header > h2 {
   filter: drop-shadow(0 0 5px var(--white));
   transform: scale(1.1) translateY(-15px);
 }
+
 @media (min-width: 500px) {
   .first-content > p {
     font-size: 19px;
@@ -170,6 +228,8 @@ header > h2 {
 @media (min-width: 768px) {
   .container-aboutMe > div:nth-child(3) {
     display: block;
+    /*se agrego esto*/
+    /* z-index: 1; */
   }
   .container-aboutMe {
     display: grid;
@@ -215,6 +275,8 @@ header > h2 {
 @media (min-width: 1200px) {
   .container-aboutMe > div:nth-child(n + 4) {
     display: block;
+    /*se agrego esto*/
+    /* z-index: 0; */
   }
   .aboutMe-section {
     width: 90%;
