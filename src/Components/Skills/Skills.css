@@ -1,3 +1,88 @@
+/* -------------------- MODAL ------------------*/
+
+/* body.active-modal {
+  overflow: hidden;
+} */
+
+html.active-modal {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
+
+.modal,
+.overlay {
+  inset: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6.5rem 2rem 0rem 2rem;
+  background: rgba(49, 49, 49, 0.55);
+  z-index: 60;
+}
+
+.modal-content {
+  position: relative;
+  overflow: hidden;
+  min-width: 350px;
+  max-width: 1000px;
+  max-height: 90%;
+  background: rgba(243, 243, 243, 0.6);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: expandModal 0.5s ease-out forwards;
+  z-index: 80;
+}
+
+.close-modal {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 0;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  color: var(--surface-primary);
+  transition: all 0.4s ease-in;
+  &:hover {
+    color: rgb(255, 255, 255);
+    transform: rotate(360deg);
+    font-weight: 400;
+    scale: 1.2;
+    background-color: rgb(192, 36, 36);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 5px 40px 2px;
+  }
+}
+
+.imgModal {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+@keyframes expandModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    translate: -50% 10%;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------*/
+
 .section-skills {
   background-color: var(--primary-dark);
   color: aliceblue;
@@ -23,34 +108,20 @@ header > h2 {
   gap: 1rem;
 }
 
-/* .container-aboutMe > div {
-  z-index: 0;
-} */
-
-.container-aboutMe > div > .modal .overlay {
-  /* z-index: 20; */
-}
-
-/* .container-aboutMe {
-  z-index: 1;
-} */
-
-.container-aboutMe > div:not(.first, .second) {
-  /* display: none; */
+.container-aboutMe > div:not(.first, .cert-0) {
+  display: none;
 }
 
 .container-aboutMe > div:not(:first-child) {
   transition: filter 0.3s, transform 0.5s;
   cursor: pointer;
   position: relative;
-  /*se agrego esto*/
   z-index: 1;
-  /* z-index: 1; */
 }
 
 .container-aboutMe > div:before,
 .container-aboutMe > div:after {
-  content: '';
+  content: "";
   position: absolute;
   left: -2px;
   top: -2px;
@@ -70,53 +141,18 @@ header > h2 {
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  z-index: -1;
+  z-index: -10;
   animation: steam 40s linear infinite;
 }
 .container-aboutMe > div:not(:first-child) > img {
-  padding: 4px;
   width: 100%;
-  height: auto;
   display: block;
-}
-.container-aboutMe > div:not(:first-child):hover {
-  /* transform: scale(1.05); */
+  border: 4px solid transparent;
 }
 
-/* .container-aboutMe > div:before,
-.container-aboutMe > div:after {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: -2px;
-  background: linear-gradient(
-    45deg,
-    #e64d8f,
-    #004080,
-    #006600,
-    #b3b300,
-    #e00d0d,
-    #e64d8f,
-    #004080,
-    #006600,
-    #b3b300,
-    #d80c0c
-  );
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: -1;
-  animation: steam 40s linear infinite;
-}
-.container-aboutMe > div:not(:first-child) > img {
-  padding: 4px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
 .container-aboutMe > div:not(:first-child):hover {
   transform: scale(1.05);
-} */
+}
 
 .first {
   max-width: 500px;
@@ -148,7 +184,7 @@ header > h2 {
     rgba(255, 255, 255, 0.5) 0%,
     rgba(255, 255, 255, 0.2) 100%
   );
-  content: '';
+  content: "";
   display: block;
   height: 120%;
   left: -95%;
@@ -164,15 +200,11 @@ header > h2 {
 .first-content:focus::before {
   animation: shine 0.85s forwards;
 }
-.second {
+
+.cert-0 {
   max-width: 500px;
   max-height: auto;
   overflow: hidden;
-}
-.imgModal {
-  min-width: auto;
-  max-width: 100%;
-  min-height: 100%;
 }
 .skills-section {
   width: 90%;
@@ -228,8 +260,6 @@ header > h2 {
 @media (min-width: 768px) {
   .container-aboutMe > div:nth-child(3) {
     display: block;
-    /*se agrego esto*/
-    /* z-index: 1; */
   }
   .container-aboutMe {
     display: grid;
@@ -251,10 +281,10 @@ header > h2 {
   .first-content > p {
     font-size: 18px;
   }
-  .second {
+  .cert-0 {
     max-width: 280px;
   }
-  .third {
+  .cert-1 {
     grid-column: 2;
     max-width: 280px;
     overflow: hidden;
@@ -275,8 +305,6 @@ header > h2 {
 @media (min-width: 1200px) {
   .container-aboutMe > div:nth-child(n + 4) {
     display: block;
-    /*se agrego esto*/
-    /* z-index: 0; */
   }
   .aboutMe-section {
     width: 90%;
@@ -291,29 +319,25 @@ header > h2 {
   .first-content > p {
     font-size: 19px;
   }
-  .second {
+  .cert-0 {
     grid-column: 2/4;
-    max-width: 600px;
-    max-height: 400px;
+    max-width: none;
+    max-height: none;
   }
-  .third {
-    align-self: flex-start;
+  .cert-1 {
+    max-width: none;
   }
-  .fourth {
+  .cert-3 {
     width: auto;
     grid-column: 4;
     grid-row: 1;
+  }
+  .cert-section {
+    height: 100%;
     overflow: hidden;
   }
-  .fourth > img {
-    min-height: 308px;
-  }
-  .fifth,
-  .six {
-    max-width: 300px;
-    max-height: 200px;
-    overflow: hidden;
-    align-self: flex-start;
+  .cert-section > img {
+    min-height: 100%;
   }
 }
 @media (min-width: 1230px) {
@@ -337,9 +361,6 @@ header > h2 {
   }
   .first-content > p {
     font-size: 19px;
-  }
-  .container-aboutMe {
-    padding-top: 1.5rem;
   }
   .section-skills {
     display: flex;

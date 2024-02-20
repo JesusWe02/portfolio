@@ -7,7 +7,7 @@
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 12;
+  z-index: 1000;
   overflow: visible;
   box-shadow: 0 1px 12px rgba(223, 217, 217, 0.3);
   min-width: 360px;
@@ -94,7 +94,7 @@
   transition: transform 0.3s;
 }
 .ul-container > li > a::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
