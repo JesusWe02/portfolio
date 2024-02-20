@@ -30,19 +30,39 @@ const certificates = [
 ];
 
 const skillsIcons = [
-  { src: htmlIcon, alt: "htmlIcon" },
-  { src: cssIcon, alt: "cssIcon" },
-  { src: jsIcon, alt: "jsIcon" },
-  { src: typeScriptIcon, alt: "typeScriptIcon" },
-  { src: reactIcon, alt: "reactIcon" },
-  { src: gitIcon, alt: "gitIcon" },
+  {
+    src: htmlIcon,
+    alt: "htmlIcon",
+    url: "https://developer.mozilla.org/es/docs/Web/HTML",
+  },
+  {
+    src: cssIcon,
+    alt: "cssIcon",
+    url: "https://developer.mozilla.org/es/docs/Web/CSS",
+  },
+  {
+    src: jsIcon,
+    alt: "jsIcon",
+    url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+  },
+  {
+    src: typeScriptIcon,
+    alt: "typeScriptIcon",
+    url: "https://www.typescriptlang.org/",
+  },
+  { src: reactIcon, alt: "reactIcon", url: "https://es.react.dev/" },
+  { src: gitIcon, alt: "gitIcon", url: "https://git-scm.com/" },
 ];
 
 const otherSkillsIcons = [
-  { src: bootstrapIcon, alt: "bootstrapIcon" },
-  { src: githubIcon, alt: "githubIcon" },
-  { src: mysqlIcon, alt: "mysqlIcon" },
-  { src: javaIcon, alt: "javaIcon" },
+  {
+    src: bootstrapIcon,
+    alt: "bootstrapIcon",
+    url: "https://getbootstrap.com/",
+  },
+  { src: githubIcon, alt: "githubIcon", url: "https://github.com/" },
+  { src: mysqlIcon, alt: "mysqlIcon", url: "https://www.mysql.com/" },
+  { src: javaIcon, alt: "javaIcon", url: "https://dev.java/" },
 ];
 
 export { certificates, skillsIcons, otherSkillsIcons };

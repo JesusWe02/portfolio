@@ -18,22 +18,6 @@ export function Skills() {
     );
     setModalActive(!modalActive);
   };
-  {
-    /*
-
-  useEffect(() => {
-    if (modalActive) {
-      document.body.classList.add("active-modal");
-    } else {
-      document.body.classList.remove("active-modal");
-    }
-    return () => {
-      document.body.classList.remove("active-modal");
-    };
-  }, [modalActive]);
-
-  */
-  }
 
   useEffect(() => {
     document.documentElement.classList.toggle("active-modal", modalActive);
@@ -85,7 +69,9 @@ export function Skills() {
         <section className="skills">
           <div>
             {skillsIcons.map((skill, index) => (
-              <img src={skill.src} alt={skill.alt} key={index} />
+              <a href={skill.url} target="_blank" rel="noopener noreferrer">
+                <img src={skill.src} alt={skill.alt} key={index} />
+              </a>
             ))}
           </div>
         </section>
@@ -93,7 +79,13 @@ export function Skills() {
           <h3>Others</h3>
           <div>
             {otherSkillsIcons.map((otherSkill, index) => (
-              <img src={otherSkill.src} alt={otherSkill.alt} key={index} />
+              <a
+                href={otherSkill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={otherSkill.src} alt={otherSkill.alt} key={index} />
+              </a>
             ))}
           </div>
         </section>
