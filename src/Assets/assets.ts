@@ -10,7 +10,7 @@ import mysqlIcon from "../icons/mysql-black.svg";
 import githubIcon from "../icons/github-logo.svg";
 import bootstrapIcon from "../icons/bootstrap.svg";
 
-import testTitulo from "../imgs/tituloTest.png";
+import titulo from "../imgs/titulo.jpg"
 import moduloI from "../imgs/CertificadoI.png";
 import moduloII from "../imgs/CertificadoII.png";
 import ceprotec from "../imgs/CeprotecCertificado.png";
@@ -22,7 +22,7 @@ import expandJobs from "../imgs/ExpandJobs.png";
 import expandCeprotec from "../imgs/ExpandCeprotec.png";
 
 const certificates = [
-  { imgSrc: testTitulo, alt: "Titulo Cibertec", expandSrc: testTitulo },
+  { imgSrc: titulo, alt: "Titulo Cibertec", expandSrc: titulo },
   { imgSrc: moduloI, alt: "Modulo I", expandSrc: expandModuloI },
   { imgSrc: moduloII, alt: "Modulo II", expandSrc: expandModuloII },
   { imgSrc: jobs, alt: "Jobs", expandSrc: expandJobs },

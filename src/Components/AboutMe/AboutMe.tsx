@@ -4,6 +4,13 @@ import imgProfileMedium from "../../imgs/profile400px.png";
 import imgProfileLarge from "../../imgs/profile500px.png";
 
 export function AboutMe() {
+  const handleRedirect = () => {
+    window.open(
+      "https://pe.linkedin.com/in/jesus-alberto-tipo-quispe-98b44130b",
+      "_blank"
+    );
+  };
+
   return (
     <main className="main-container" id="about">
       <div className="container-img">
@@ -19,7 +26,7 @@ export function AboutMe() {
           <h2>Flexibility, Communication & Commitment</h2>
           <p className="p-description">"Make the world recall your name"</p>
           <div className="button-info">
-            <button>LinkedIn</button>
+            <button onClick={handleRedirect}>LinkedIn</button>
           </div>
         </div>
       </div>

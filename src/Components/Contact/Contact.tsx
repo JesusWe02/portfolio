@@ -56,7 +56,10 @@ export function Contact() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://pe.linkedin.com/in/jesus-alberto-tipo-quispe-98b44130b"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
@@ -66,14 +69,13 @@ export function Contact() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://github.com/JesusWe02" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
           <li>
             <a href="#">
               <FontAwesomeIcon icon={faDiscord} />
-              {/* <FontAwesomeIcon icon={faSquareInstagram} /> */}
             </a>
           </li>
         </ul>
